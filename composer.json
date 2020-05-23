@@ -1,0 +1,21 @@
+{
+  "name": "lunatic/lunatic",
+  "config": {
+    "process-timeout": 3000
+  },
+  "scripts": {
+    "start": "php -S 0.0.0.0:8000 -t public"
+  },
+  "authors": [
+    {
+      "name": "Yannick Debrée",
+      "email": "debree.yannick13@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/",
+      "Lunatic\\": "src/"
+    }
+  }
+}

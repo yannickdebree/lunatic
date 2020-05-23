@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  app:
+    image: composer
+    working_dir: /usr/lib/app
+    volumes:
+      - .:/usr/lib/app
+    command: "composer start"
+    ports:
+      - 8000:8000
