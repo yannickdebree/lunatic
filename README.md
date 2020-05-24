@@ -1,5 +1,5 @@
 # Lunatic
-## PHP router helper for web (MVP).
+## PHP router framework for web (MVP).
 
 This repository is originally an exercice I realised to :
 * solidify my Oriented-Object Programming knowledge and assets,
