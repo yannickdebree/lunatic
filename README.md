@@ -11,4 +11,4 @@ The particularity of Lunatic is the use of annotations to define routes of web c
 
 Frameworks like Symfony have even implemented this feature, but they don't use the same comments to generate the documentation of routes.
 
-So the idea behind Lunatic is to give developers the possibility to manage configuration and documentation together.
+So the advantage of Lunatic could be it'll give developers the possibility to manage configuration and documentation together (the package is actually not completed for this behavior).
