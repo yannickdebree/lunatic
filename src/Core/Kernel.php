@@ -2,30 +2,20 @@
 
 namespace Lunatic\Core;
 
-final class Kernel {
-    private string $rootPath;
+class Kernel {
     private string $srcPath;
-    protected static $instance;
+    private string $srcNamespace;
     
-    private function __construct(string $srcPath){
+    function __construct(string $srcPath, string $srcNamespace){
         $this->srcPath = $srcPath;
-    }
-
-    public static function createInstance(string $srcPath): Kernel {
-        static::$instance = new Kernel($srcPath);
-        return static::$instance;
-    }
-
-    public static function getInstance(): Kernel {
-        if (!isset(static::$instance)) {
-            // TODO : manage better exceptions.
-            throw new \Exception("Kernel must be created before getting.");
-        }
-        
-        return static::$instance;
+        $this->srcNamespace = $srcNamespace;
     }
 
     public function getSrcPath(): string {
         return $this->srcPath;
+    }
+
+    public function getSrcNamespace(): string {
+        return $this->srcNamespace;
     }
 }

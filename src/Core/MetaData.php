@@ -14,8 +14,7 @@ class MetaData {
 
     static public function fromAnnotation(string $annotation): MetaData {
         $trimedAnnotation = str_replace(['/**', '*', '*/'], '', $annotation);
-        // TODO : optimize regex matching function.
-        preg_match('/@[a-zA-Z]*/', $trimedAnnotation, $nameMatches);
+        preg_match('/@(LunaticController|LunaticMethod)*/', $trimedAnnotation, $nameMatches);
 
         // TODO : implement match error exception.
         $name = str_replace('@', '', $nameMatches[0]);

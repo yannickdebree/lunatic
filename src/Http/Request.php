@@ -17,7 +17,7 @@ class Request {
         $method = $_SERVER['REQUEST_METHOD'];
 
         $queryParamsInspector = new QueryParamsInspector($_SERVER['REQUEST_URI']);
-        $uri = $queryParamsInspector->getUri();
+        $uri = $queryParamsInspector->getPurgedUri();
         $queryParams = $queryParamsInspector->getQueryParams();
 
         return new Request($method, $uri, $queryParams);

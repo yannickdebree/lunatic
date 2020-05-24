@@ -14,7 +14,7 @@ class MetaDataManager {
 
         foreach($filesPaths as $filesPath){
             $controllerName = str_replace([$this->kernel->getSrcPath().'/', '.php'], '', $filesPath);
-            $reflector = new \ReflectionClass('App\\'.$controllerName);
+            $reflector = new \ReflectionClass($this->kernel->getSrcNamespace().'\\'.$controllerName);
             
             foreach ($reflector->getMethods() as $method){
                 $metaData = MetaData::fromAnnotation($method->getDocComment());
